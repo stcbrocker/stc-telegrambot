@@ -1,0 +1,81 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@10.9.3
+2 info using node@v22.18.0
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/.npmrc
+5 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+6 verbose title npm install cross-env
+7 verbose argv "install" "--global" "cross-env"
+8 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2025-08-23T23_18_40_439Z-
+9 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2025-08-23T23_18_40_439Z-debug-0.log
+10 silly packumentCache heap:1098907648 maxSize:274726912 maxEntrySize:137363456
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest cross-env@*
+15 silly packumentCache full:https://registry.npmjs.org/cross-env cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/cross-env 429ms (cache revalidated)
+17 silly packumentCache full:https://registry.npmjs.org/cross-env set size:148397 disposed:false
+18 silly placeDep ROOT cross-env@10.0.0 OK for:  want: *
+19 silly fetch manifest @epic-web/invariant@^1.0.0
+20 silly packumentCache full:https://registry.npmjs.org/@epic-web%2finvariant cache-miss
+21 silly fetch manifest cross-spawn@^7.0.6
+22 silly packumentCache full:https://registry.npmjs.org/cross-spawn cache-miss
+23 http fetch GET 200 https://registry.npmjs.org/cross-spawn 473ms (cache revalidated)
+24 silly packumentCache full:https://registry.npmjs.org/cross-spawn set size:109066 disposed:false
+25 http fetch GET 200 https://registry.npmjs.org/@epic-web%2finvariant 1854ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/@epic-web%2finvariant set size:undefined disposed:false
+27 silly placeDep node_modules/cross-env @epic-web/invariant@1.0.0 OK for: cross-env@10.0.0 want: ^1.0.0
+28 silly placeDep node_modules/cross-env cross-spawn@7.0.6 OK for: cross-env@10.0.0 want: ^7.0.6
+29 silly fetch manifest which@^2.0.1
+30 silly packumentCache full:https://registry.npmjs.org/which cache-miss
+31 silly fetch manifest path-key@^3.1.0
+32 silly packumentCache full:https://registry.npmjs.org/path-key cache-miss
+33 silly fetch manifest shebang-command@^2.0.0
+34 silly packumentCache full:https://registry.npmjs.org/shebang-command cache-miss
+35 http fetch GET 200 https://registry.npmjs.org/path-key 117ms (cache revalidated)
+36 silly packumentCache full:https://registry.npmjs.org/path-key set size:16975 disposed:false
+37 http fetch GET 200 https://registry.npmjs.org/which 124ms (cache revalidated)
+38 silly packumentCache full:https://registry.npmjs.org/which set size:62722 disposed:false
+39 http fetch GET 200 https://registry.npmjs.org/shebang-command 190ms (cache revalidated)
+40 silly packumentCache full:https://registry.npmjs.org/shebang-command set size:8525 disposed:false
+41 silly placeDep node_modules/cross-env path-key@3.1.1 OK for: cross-spawn@7.0.6 want: ^3.1.0
+42 silly placeDep node_modules/cross-env shebang-command@2.0.0 OK for: cross-spawn@7.0.6 want: ^2.0.0
+43 silly placeDep node_modules/cross-env which@2.0.2 OK for: cross-spawn@7.0.6 want: ^2.0.1
+44 silly fetch manifest shebang-regex@^3.0.0
+45 silly packumentCache full:https://registry.npmjs.org/shebang-regex cache-miss
+46 silly fetch manifest isexe@^2.0.0
+47 silly packumentCache full:https://registry.npmjs.org/isexe cache-miss
+48 http fetch GET 200 https://registry.npmjs.org/shebang-regex 85ms (cache revalidated)
+49 silly packumentCache full:https://registry.npmjs.org/shebang-regex set size:9763 disposed:false
+50 http fetch GET 200 https://registry.npmjs.org/isexe 88ms (cache revalidated)
+51 silly packumentCache full:https://registry.npmjs.org/isexe set size:19340 disposed:false
+52 silly placeDep node_modules/cross-env shebang-regex@3.0.0 OK for: shebang-command@2.0.0 want: ^3.0.0
+53 silly placeDep node_modules/cross-env isexe@2.0.0 OK for: which@2.0.2 want: ^2.0.0
+54 silly reify moves {}
+55 http cache shebang-regex@https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz 0ms (cache hit)
+56 http cache which@https://registry.npmjs.org/which/-/which-2.0.2.tgz 0ms (cache hit)
+57 http cache shebang-command@https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz 0ms (cache hit)
+58 http cache path-key@https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz 0ms (cache hit)
+59 http cache cross-spawn@https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz 1ms (cache hit)
+60 http cache @epic-web/invariant@https://registry.npmjs.org/@epic-web/invariant/-/invariant-1.0.0.tgz 0ms (cache hit)
+61 http cache isexe@https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz 0ms (cache hit)
+62 http cache cross-env@https://registry.npmjs.org/cross-env/-/cross-env-10.0.0.tgz 0ms (cache hit)
+63 silly tarball no local data for @epic-web/invariant@https://registry.npmjs.org/@epic-web/invariant/-/invariant-1.0.0.tgz. Extracting by manifest.
+64 silly tarball no local data for cross-env@https://registry.npmjs.org/cross-env/-/cross-env-10.0.0.tgz. Extracting by manifest.
+65 http fetch GET 200 https://registry.npmjs.org/@epic-web/invariant/-/invariant-1.0.0.tgz 161ms (cache miss)
+66 http fetch GET 200 https://registry.npmjs.org/cross-env/-/cross-env-10.0.0.tgz 161ms (cache miss)
+67 silly ADD node_modules/cross-env
+68 silly ADD node_modules/cross-env/node_modules/isexe
+69 silly ADD node_modules/cross-env/node_modules/shebang-regex
+70 silly ADD node_modules/cross-env/node_modules/which
+71 silly ADD node_modules/cross-env/node_modules/shebang-command
+72 silly ADD node_modules/cross-env/node_modules/path-key
+73 silly ADD node_modules/cross-env/node_modules/cross-spawn
+74 silly ADD node_modules/cross-env/node_modules/@epic-web/invariant
+75 verbose cwd /data/data/com.termux/files/home/wa-bot-api
+76 verbose os Linux 5.15.149-android13-8-o-00989-g5b0287cc2b69
+77 verbose node v22.18.0
+78 verbose npm  v10.9.3
+79 verbose exit 0
+80 info ok

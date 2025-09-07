@@ -1,0 +1,23 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.9.3
+2 info using node@v22.18.0
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/wa-bot-api/node_modules/@open-wa/wa-automate/.npmrc
+5 silly config load:file:/data/data/com.termux/files/home/.npmrc
+6 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+7 verbose title npm exec ignore-check@latest -p **.data.json -p **.node-persist** -p **_IGNORE_** --comment managed by open-wa
+8 verbose argv "exec" "--" "ignore-check@latest" "-p" "**.data.json" "-p" "**.node-persist**" "-p" "**_IGNORE_**" "--comment" "managed by open-wa"
+9 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2025-08-23T23_21_27_928Z-
+10 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2025-08-23T23_21_27_928Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly packumentCache heap:1098907648 maxSize:274726912 maxEntrySize:137363456
+14 http fetch GET 200 https://registry.npmjs.org/ignore-check 1062ms (cache miss)
+15 silly packumentCache heap:1098907648 maxSize:274726912 maxEntrySize:137363456
+16 silly packumentCache heap:1098907648 maxSize:274726912 maxEntrySize:137363456
+17 verbose cwd /data/data/com.termux/files/home/wa-bot-api/node_modules/@open-wa/wa-automate
+18 verbose os Linux 5.15.149-android13-8-o-00989-g5b0287cc2b69
+19 verbose node v22.18.0
+20 verbose npm  v10.9.3
+21 verbose exit 0
+22 info ok

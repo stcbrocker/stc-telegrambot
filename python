@@ -1,0 +1,53 @@
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+import logging
+
+# ====== DATA BOT ======
+TOKEN = "7804827343:AAF0_LEnO_DQTvGyevO0idiu-rm3mIpgcfQ"
+GROUP_ID = -1001192308400  # ID grup tempat tombol disematkan
+LINK_SIGNAL = "https://t.me/+czCo8Z66tLpmYThl"
+LINK_APK = "https://drive.google.com/uc?export=download&id=1X7GRryVIPHIHQY1omiMnZciPYQAWq8Ix"
+LINK_AI = "https://t.me/+8SujvHCvjwk0OTJl"
+
+# Logging untuk debug
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+
+# ===== MENU START =====
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    keyboard = [
+        [InlineKeyboardButton("📊 Buka STC Broker", url="https://stcbroker.id")],
+        [InlineKeyboardButton("⬇️ Install APK STC AutoTrade", url=LINK_APK)],
+        [InlineKeyboardButton("📢 Abdate Signal 24 Jam", url=LINK_SIGNAL)],
+        [InlineKeyboardButton("🤖 Signal Ai Automatis", url=LINK_AI)]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    await update.message.reply_text("📌 Menu STC AutoTrade", reply_markup=reply_markup)
+
+# ===== KIRIM TOMBOL SINYAL =====
+async def kirim_tombol_sinyal(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if update.effective_chat.id != GROUP_ID:
+        return
+
+    chat_id = update.effective_chat.id
+    keyboard = [
+        [InlineKeyboardButton("🔵 LIHAT SIGNAL VIP", url=LINK_SIGNAL)]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+
+    msg = await context.bot.send_message(
+        chat_id=chat_id,
+        text="Klik tombol biru di bawah untuk melihat signal lengkap 📈",
+        reply_markup=reply_markup
+    )
+    await context.bot.pin_chat_message(chat_id=chat_id, message_id=msg.message_id)
+    await update.message.reply_text("✅ Tombol sudah dikirim & disematkan ke grup.")
+
+# ===== MAIN =====
+if __name__ == "__main__":
+    app = Application.builder().token(TOKEN).build()
+
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(MessageHandler(filters.TEXT & filters.Regex(r'(?i)\bsinyal\b'), kirim_tombol_sinyal))
+
+    print("✅ Bot berjalan... Tunggu kata 'sinyal' di grup.")
+    app.run_polling()

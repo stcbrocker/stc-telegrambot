@@ -1,0 +1,41 @@
+from telethon import TelegramClient, events, types
+from datetime import datetime
+import asyncio
+
+api_id = 12345678  # ganti dengan API ID kamu
+api_hash = 'abcd1234abcd1234abcd1234abcd1234'  # ganti dengan API hash kamu
+bot = TelegramClient('bot_gambar', api_id, api_hash)
+
+# Gambar BUY
+buy_image = types.InputDocument(
+    id=6095662197755617772,
+    access_hash=4914950524209003605,
+    file_reference=b"\x01\x00\x00\x00\x0bh\x92\xfe'\x98\x87m\x17\x067\x03\x81\xd8\xdf\xc9\x9cz\xaawq"
+)
+
+# Gambar SELL
+sell_image = types.InputDocument(
+    id=6095662197755617774,
+    access_hash=-5448662092349685479,
+    file_reference=b'\x01\x00\x00\x00\x0ch\x92\xfe3\x12\xbc\x7f+\x0f\xabVG\x11d\xfe\x0f\xe4\x083\x84'
+)
+
+# ID channel tujuan
+target_channel = -2511199734
+
+@bot.on(events.NewMessage(chats=target_channel))
+async def handler(event):
+    message_text = event.raw_text.lower()
+    print(f"📥 Detected: {message_text}")
+    
+    if "entry buy" in message_text:
+        await bot.send_file(target_channel, buy_image, caption="📈 BUY NOW")
+        print("✅ Gambar BUY dikirim.")
+        
+    elif "entry sell" in message_text:
+        await bot.send_file(target_channel, sell_image, caption="📉 SELL NOW")
+        print("✅ Gambar SELL dikirim.")
+
+print("🤖 Bot gambar aktif... Menunggu sinyal dari channel...")
+bot.start()
+bot.run_until_disconnected()
